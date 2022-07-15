@@ -1,0 +1,1 @@
+console.log('INIT - WITH DENO AND TS');

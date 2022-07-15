@@ -1,0 +1,5 @@
+{
+  "environment": "development",
+  "connectionString": "mongodb://myDBReader:D1fficultP%40ssw0rd@mongodb0.example.com:27017/?authSource=admin",
+  "apiUrl": "https://bookclub.com"
+}
