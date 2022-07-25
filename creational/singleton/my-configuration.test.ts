@@ -1,4 +1,4 @@
-import { assert } from "https://deno.land/std@0.148.0/testing/asserts.ts";
+import { assert } from 'https://deno.land/std@0.148.0/testing/asserts.ts';
 import MyConfiguration from './my-configuration.ts';
 
 const config = MyConfiguration.getInstance();

@@ -1,3 +1,3 @@
 export default interface IPaymentMethood {
-  comission: number;
+  commission: number;
 }
