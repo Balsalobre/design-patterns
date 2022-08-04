@@ -26,3 +26,13 @@ Factory Method es un patrón de diseño creacional que proporciona una interfaz 
 ## Abstract Factory
 Permite agrupar familias de objetos para su creación.
 Es una fábrica de fábricas.
+
+## Adapter
+Adapter es un patrón de diseño estructural que permite la colaboración entre objetos con interfaces incompatibles.
+
+Puede darse el caso de tener una una clase que no sea compatile y no pueda trabajarse de manera polimorfica con ella, debido a que no puede implementar la interfaz de otra distinta.
+
+*ejemplo: SlackNotification* no puede usar la interfaz *notification.interface.ts* puesto que no tiene el método post usa por la razón que sea el método send.
+
+Se puede crear un adaptador. Se trata de un objeto especial que convierte la interfaz de un objeto, de forma que otro objeto pueda comprenderla.
+
