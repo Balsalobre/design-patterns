@@ -36,3 +36,31 @@ Puede darse el caso de tener una una clase que no sea compatile y no pueda traba
 
 Se puede crear un adaptador. Se trata de un objeto especial que convierte la interfaz de un objeto, de forma que otro objeto pueda comprenderla.
 
+## Decorator
+Decorator es un patrón de diseño estructural que te permite añadir funcionalidades a objetos colocando estos objetos dentro de objetos encapsuladores especiales que contienen estas funcionalidades.
+
+Capas --> decoradores.
+
+*BasePrice* --> Es la clase base, el comportamiento va a ser agregado por los decoradores.
+
+*SpecialPriceDecorator* & *VipCustomerDecorator* pueden asignarse a la variable discount porque implementan la misma interfaz
+
+## Dependency Injection
+
+Tratamos de obtener la instancia de la clase que necesitemos de forma dinámica, sin acoplar el código a una implementación o a una instancia en particular.
+
+Para poder flexibilizar esto podemos unsar el constructor de la clase **PersonDAOImpl** o en su defecto algún método capaz de configurar la futura instancia que necesitemos.
+
+```ts
+    private _conexion: IConnection;
+    
+    // constructor(private _conexion: IConnection) {}
+
+    get connection(): IConnection {
+        return this._conexion
+    };
+```
+
+Existen diferentes variantes, dependiendo del framework que se use: anotaciones, decoradores *(@Inject)*...
+
+Normalmente un framwork que soporta inyección de dependecias, posee un contenedor que es capaz de manejar las instancias de las clases que queremos usar.
