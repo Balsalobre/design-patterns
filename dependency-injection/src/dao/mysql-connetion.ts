@@ -7,6 +7,14 @@ export class MySQLConnection implements IConnection {
     private _host: string
   ) {}
 
+  get user(): string {
+    return this._user;
+  }
+
+  set user(value: string) {
+    this._user = value;
+  }
+
 	connect(): void {
 		console.log('Connecting to MySQL database...');
 	}

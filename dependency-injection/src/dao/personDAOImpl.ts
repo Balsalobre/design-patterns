@@ -4,7 +4,7 @@ import { IConnection } from './entities/conexion.interface.ts';
 import { PersonDAO } from './entities/personDAO.ts';
 
 export class PersonDAOImpl implements PersonDAO {
-	private _conexion: IConnection;
+	private _conexion!: IConnection;
 
   // constructor(private _conexion: IConnection) {}
 
@@ -12,8 +12,8 @@ export class PersonDAOImpl implements PersonDAO {
     throw new Error('Method not implemented yet!')
   }
 
-  get connection(): IConnection {
-    return this._conexion
+  get connection(): IConnection{
+    return this._conexion;
   };
 
   set connection(conexion: IConnection) {
