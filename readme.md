@@ -51,16 +51,40 @@ Tratamos de obtener la instancia de la clase que necesitemos de forma dinámica,
 
 Para poder flexibilizar esto podemos unsar el constructor de la clase **PersonDAOImpl** o en su defecto algún método capaz de configurar la futura instancia que necesitemos.
 
+
+ - Pasaríamos de un código con esta dependencia a la clase Connection:
+
+```ts
+    private _conexion: Connection;
+
+    constructor(conexion = new MySQLConnection()) {
+        this._conexion = conexion;
+    }
+```
+- a este otro:
+    
+    mediante este código esta clase ya no es responsable de la instanciación de la clase **Connection**
 ```ts
     private _conexion: IConnection;
-    
+
     // constructor(private _conexion: IConnection) {}
 
     get connection(): IConnection {
         return this._conexion
+    };
+
+    set connection(conexion: IConnection) {
+        this._conexion = conexion;
     };
 ```
 
 Existen diferentes variantes, dependiendo del framework que se use: anotaciones, decoradores *(@Inject)*...
 
 Normalmente un framwork que soporta inyección de dependecias, posee un contenedor que es capaz de manejar las instancias de las clases que queremos usar.
+
+### Dependency inversion (Mejora) SOLID
+
+Mediante el uso de una interfaz *IConnection* dejamos fuera la implementación de esta clase, por el método o por el constructor.
+De esta forma es posible pasar por parámetro del constructor o mediante el set, cualquier clase concreta que implemente la interfaz.
+
+No se depende de una implementación concreta si no de una interfaz.
