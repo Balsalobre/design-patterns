@@ -18,16 +18,20 @@
 
 
 ## Singleton
+
 Singleton es un patrón de diseño creacional que nos permite asegurarnos de que una clase tenga una única instancia, a la vez que proporciona un punto de acceso global a dicha instancia.
 
 ## Factory
+
 Factory Method es un patrón de diseño creacional que proporciona una interfaz para crear objetos en una superclase, mientras permite a las subclases alterar el tipo de objetos que se crearán.
 
 ## Abstract Factory
+
 Permite agrupar familias de objetos para su creación.
 Es una fábrica de fábricas.
 
 ## Adapter
+
 Adapter es un patrón de diseño estructural que permite la colaboración entre objetos con interfaces incompatibles.
 
 Puede darse el caso de tener una una clase que no sea compatile y no pueda trabajarse de manera polimorfica con ella, debido a que no puede implementar la interfaz de otra distinta.
@@ -37,6 +41,7 @@ Puede darse el caso de tener una una clase que no sea compatile y no pueda traba
 Se puede crear un adaptador. Se trata de un objeto especial que convierte la interfaz de un objeto, de forma que otro objeto pueda comprenderla.
 
 ## Decorator
+
 Decorator es un patrón de diseño estructural que te permite añadir funcionalidades a objetos colocando estos objetos dentro de objetos encapsuladores especiales que contienen estas funcionalidades.
 
 Capas --> decoradores.
@@ -88,3 +93,14 @@ Mediante el uso de una interfaz *IConnection* dejamos fuera la implementación d
 De esta forma es posible pasar por parámetro del constructor o mediante el set, cualquier clase concreta que implemente la interfaz.
 
 No se depende de una implementación concreta si no de una interfaz.
+
+## Proxy
+
+Proxy es un patrón de diseño estructural que te permite proporcionar un sustituto o marcador de posición para otro objeto. Un proxy controla el acceso al objeto original, permitiéndote hacer algo antes o después de que la solicitud llegue al objeto original.
+
+La clase *"proxy"* va a ser como un intermediario, un wrapper de la clase original, la cual tendrá un compotamiento adicional, para solucionar por ejemplo problemas de concurrencia.
+
+## Command
+Command es un patrón de diseño de comportamiento que convierte una solicitud en un objeto independiente que contiene toda la información sobre la solicitud. Esta transformación te permite parametrizar los métodos con diferentes solicitudes, retrasar o poner en cola la ejecución de una solicitud y soportar operaciones que no se pueden realizar.
+
+Como por ejemplo, el procesamiento de un pago en diferentes plataformas, clientes como puede ser (Stripe, Redsys);
