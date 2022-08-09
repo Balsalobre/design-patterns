@@ -2,18 +2,18 @@
 
 1.  Patrones creacionales (Problemas de instancia o de creación de objetos)
     - [Singleton](#Singleton)
-    - Factory
-    - Abstract Factory
-    - Factory Method
+    - [Factory](#Factory)
+    - [Abstract Factory](#Abstract-Factory)
+    - [Factory Method](#Factory-Method)
 
 2.  Patrones estructurales (Relación entre clases)
-    - Adapter
-    - Decorator
-    - Proxy
+    - [Adapter](#Adapter)
+    - [Decorator](#Decorator)
+    - [Proxy](#Proxy)
 
 3.  Patrones de comportamiento (Interacción y responsabilidades entre clases)
-    - Command
-    - Observer
+    - [Command](#Command)
+    - [Observer](#Observer)
     - [Strategy](#Strategy)
 
 
