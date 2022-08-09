@@ -110,3 +110,21 @@ Como por ejemplo, el procesamiento de un pago en diferentes plataformas, cliente
 También llamado: Observador, Publicación-Suscripción, Modelo-patrón, Event-Subscriber, Listener
 
 Observer es un patrón de diseño de comportamiento que te permite definir un mecanismo de suscripción para notificar a varios objetos sobre cualquier evento que le suceda al objeto que están observando.
+
+## Strategy
+
+Strategy es un patrón de diseño de comportamiento que te permite definir una familia de algoritmos, colocar cada uno de ellos en una clase separada y hacer sus objetos intercambiables.
+
+- En primer lugar definimos una interfaz base *PaymentStrategy* que va a implementar el método execute.
+
+- En segundo lugar heredando de esta, definimos la interfaz *PaymentCardStrategy* añadiendo las propiedades necesarias para incluir una tarjeta de crédito
+
+- En tercer lugar mediante la clase *MastercardStrategy* implementamos esta interfaz ya con las propiedades y métodos propios de una tarjeta de crédito.
+
+Para poder hacer uso de todas las implementaciones que tengamos de *PaymentCardStrategy* en la clase Checkout, mediante el método setStrategy definimos la estrategia primero para usar luego el método *execute* que es el que ejecuta finalmente la lógica del algoritmo que se le pase --> llama al contexto que es el que sabe como hacer el pago.
+
+```ts
+  public setStrategy(context: PaymentStrategy) {
+    this.context = context;
+  }
+```
