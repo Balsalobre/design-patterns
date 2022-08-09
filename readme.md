@@ -104,3 +104,9 @@ La clase *"proxy"* va a ser como un intermediario, un wrapper de la clase origin
 Command es un patrón de diseño de comportamiento que convierte una solicitud en un objeto independiente que contiene toda la información sobre la solicitud. Esta transformación te permite parametrizar los métodos con diferentes solicitudes, retrasar o poner en cola la ejecución de una solicitud y soportar operaciones que no se pueden realizar.
 
 Como por ejemplo, el procesamiento de un pago en diferentes plataformas, clientes como puede ser (Stripe, Redsys);
+
+## Observer
+
+También llamado: Observador, Publicación-Suscripción, Modelo-patrón, Event-Subscriber, Listener
+
+Observer es un patrón de diseño de comportamiento que te permite definir un mecanismo de suscripción para notificar a varios objetos sobre cualquier evento que le suceda al objeto que están observando.

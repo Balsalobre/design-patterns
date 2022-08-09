@@ -1,5 +1,5 @@
 import { describe, it, beforeEach } from 'https://deno.land/std@0.148.0/testing/bdd.ts';
-import {  assertEquals } from 'https://deno.land/std@0.148.0/testing/asserts.ts';
+import { assertEquals } from 'https://deno.land/std@0.148.0/testing/asserts.ts';
 
 import { CreditCardDto } from "./src/payment-commands/dto/credit-card.dto.ts";
 import { PaymentMethodHandler } from "./src/payment-method.handler.ts";
