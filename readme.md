@@ -1,7 +1,7 @@
 # Patrones de diseño en Deno & TS:
 
 1.  Patrones creacionales (Problemas de instancia o de creación de objetos)
-    - Singleton
+    - [Singleton](#Singleton)
     - Factory
     - Abstract Factory
     - Factory Method
@@ -14,7 +14,7 @@
 3.  Patrones de comportamiento (Interacción y responsabilidades entre clases)
     - Command
     - Observer
-    - Strategy
+    - [Strategy](#Strategy)
 
 
 ## Singleton
