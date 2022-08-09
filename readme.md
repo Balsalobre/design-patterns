@@ -11,6 +11,7 @@
     - [Proxy](#Proxy)
 
 3.  Patrones de comportamiento (Interacción y responsabilidades entre clases)
+    - [Dependency Injection](#Dependency-Injection)
     - [Command](#Command)
     - [Observer](#Observer)
     - [Strategy](#Strategy)
@@ -48,6 +49,12 @@ Capas --> decoradores.
 *BasePrice* --> Es la clase base, el comportamiento va a ser agregado por los decoradores.
 
 *SpecialPriceDecorator* & *VipCustomerDecorator* pueden asignarse a la variable discount porque implementan la misma interfaz
+
+## Proxy
+
+Proxy es un patrón de diseño estructural que te permite proporcionar un sustituto o marcador de posición para otro objeto. Un proxy controla el acceso al objeto original, permitiéndote hacer algo antes o después de que la solicitud llegue al objeto original.
+
+La clase *"proxy"* va a ser como un intermediario, un wrapper de la clase original, la cual tendrá un compotamiento adicional, para solucionar por ejemplo problemas de concurrencia.
 
 ## Dependency Injection
 
@@ -92,12 +99,6 @@ Mediante el uso de una interfaz *IConnection* dejamos fuera la implementación d
 De esta forma es posible pasar por parámetro del constructor o mediante el set, cualquier clase concreta que implemente la interfaz.
 
 No se depende de una implementación concreta si no de una interfaz.
-
-## Proxy
-
-Proxy es un patrón de diseño estructural que te permite proporcionar un sustituto o marcador de posición para otro objeto. Un proxy controla el acceso al objeto original, permitiéndote hacer algo antes o después de que la solicitud llegue al objeto original.
-
-La clase *"proxy"* va a ser como un intermediario, un wrapper de la clase original, la cual tendrá un compotamiento adicional, para solucionar por ejemplo problemas de concurrencia.
 
 ## Command
 Command es un patrón de diseño de comportamiento que convierte una solicitud en un objeto independiente que contiene toda la información sobre la solicitud. Esta transformación te permite parametrizar los métodos con diferentes solicitudes, retrasar o poner en cola la ejecución de una solicitud y soportar operaciones que no se pueden realizar.
