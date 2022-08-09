@@ -4,7 +4,6 @@
     - [Singleton](#Singleton)
     - [Factory](#Factory)
     - [Abstract Factory](#Abstract-Factory)
-    - [Factory Method](#Factory-Method)
 
 2.  Patrones estructurales (Relación entre clases)
     - [Adapter](#Adapter)
